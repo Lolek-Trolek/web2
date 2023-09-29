@@ -6,7 +6,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var pizzasRouter = require('./routes/pizzas');
-var filmsRouter = require('./routes/exercice1.1/films');
+var filmsRouter = require('./exercice1.1/films');
 
 var app = express();
 
