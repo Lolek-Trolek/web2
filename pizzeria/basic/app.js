@@ -9,6 +9,33 @@ var pizzasRouter = require('./routes/pizzas');
 var filmsRouter = require('./exercice1.1/films');
 
 var app = express();
+//Date actuel sur l'execution d'une requête(vu au tutoriel)
+app.use((req,res,next) => {
+    console.log('Time:',Date.now());
+    next();
+});
+//exo1.2 
+let liens = [];
+
+let compteurs = [];
+
+app.use((req,res,next) => {
+    let lien = req.method +" "+req.path;
+    let position = liens.indexOf(lien);
+    console.log(position);
+    if(position === -1){
+        liens.push(lien);
+        compteurs.push(1);
+    }
+    else{
+        compteurs[position]=compteurs[position]+1;
+    }
+    console.log('Request counter :');
+    for(let i = 0; i < liens.length; i++){
+        console.log("- "+liens[i] +" : "+compteurs[i]);
+    }
+    next();
+});
 
 app.use(logger('dev'));
 app.use(express.json());
