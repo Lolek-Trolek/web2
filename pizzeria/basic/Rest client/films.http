@@ -14,8 +14,8 @@ Content-Type: application/json
 }
 
 ###  Read all films sorted by duration (ascending)
-GET {{baseUrl}}/films/?minimumduration=min
+GET {{baseUrl}}/films/?minimum-duration=min
 Content-Type: application/json
 
 ### Read all films sorted by duration (descending)
-GET {{baseUrl}}/films/?minimumduration=max
+GET {{baseUrl}}/films/?minimum-duration=max

@@ -37,8 +37,8 @@ GET /films?minimum-duration=max : descending order by duration
 */
 router.get('/', (req, res, next) => {
     const orderByMin =
-      req?.query?.minimumduration?.includes('min')
-        ? req.query.minimumduration
+      req?.query['minimum-duration']?.includes('min')
+        ? req.query['minimum-duration']
         : undefined;
     let orderedFILMS;
     console.log(`minimum-duration by ${orderByMin ?? 'not requested'}`);
