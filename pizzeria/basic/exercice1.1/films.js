@@ -77,6 +77,9 @@ router.get('/', (req, res, next) => {
     if (!title || !duration || !budget || !link) {
         return res.sendStatus(400); // error code '400 Bad request'
     }
+    /*if ((FILMS.findIndex((film)=> film.title == req.params.title))<0){
+        return res.sendStatus(409);
+    }*/
 
     const lastItemIndex = FILMS.length !== 0 ? FILMS.length - 1 : undefined;
     const lastId = lastItemIndex !== undefined ? FILMS[lastItemIndex]?.id : 0;
@@ -94,6 +97,7 @@ router.get('/', (req, res, next) => {
 
     res.json(newFILM);
 });
+
 
      
   module.exports = router;
