@@ -1,0 +1,1 @@
+Faut aller au app.js et voir le code commenter en exo1.2 

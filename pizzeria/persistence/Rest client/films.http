@@ -1,0 +1,21 @@
+### Read all Films 
+@baseUrl= http://localhost:3000
+GET {{baseUrl}}/films
+
+### CREATE Film 
+POST {{baseUrl}}/films
+Content-Type: application/json
+
+{
+    "title":"Policja",
+    "duration":120,
+    "budget":1,
+    "link":"www.hwdp.pl"
+}
+
+###  Read all films sorted by duration (ascending)
+GET {{baseUrl}}/films/?minimum-duration=min
+Content-Type: application/json
+
+### Read all films sorted by duration (descending)
+GET {{baseUrl}}/films/?minimum-duration=max
