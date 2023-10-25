@@ -1,0 +1,40 @@
+/* Styles de base du bouton */
+.button {
+    display: inline-block;
+    background-color: #3498db;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  /* Lorsque le curseur survole le bouton */
+  .button:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Pour un effet de bouton en relief */
+  .button:active {
+    position: relative;
+    top: 2px;
+  }
+  
+  /* Exemple de bordure arrondie pour un look plus moderne */
+  .rounded-button {
+    border-radius: 20px;
+  }
+  
+  /* Exemple de bouton avec une couleur de fond différente */
+  .primary-button {
+    background-color: #e74c3c;
+  }
+  
+  /* Exemple de bouton avec du texte plus grand */
+  .large-button {
+    font-size: 20px;
+  }
